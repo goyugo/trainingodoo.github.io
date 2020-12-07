@@ -1,0 +1,21 @@
+$colors: (
+	'white'		: #FFFFFF,
+	'light'		: #FAFAFA,
+	'soft' 		: #EEEEEE,
+	'grey'		: #CCCCCC,
+	'primary'	: #2ACCE8,
+	'dark'	    : #26303C,
+	'muted'	    : #767878,
+	'black'	    : #191D22,
+);
+
+// Default Font Settings
+$base-font-size   : 14px;
+$base-font-family : 'Rubik', sans-serif;
+
+// Responsive Breakpoint
+$breakpoint-xs	: 480px;
+$breakpoint-sm	: 576px;
+$breakpoint-md	: 768px;
+$breakpoint-lg	: 992px;
+$breakpoint-xl	: 1140px;

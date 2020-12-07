@@ -1,0 +1,25 @@
+// Read Color Map
+@function color($color-name) {
+	@return map-get($colors, $color-name);
+}
+
+// Read Font Map
+@function font($font-name) {
+	@return map-get($fonts, $font-name);
+}
+
+@each $name, $value in $colors {
+	.text-#{$name} {
+		color: $value !important;
+	}
+}
+
+// Set color based on background color
+@function set-text-color($color) {  
+    @if (lightness($color) > 70) {
+      @return color('darkblue');
+    }
+    @else {
+      @return color('white');
+    }
+}

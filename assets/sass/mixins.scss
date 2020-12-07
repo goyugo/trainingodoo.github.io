@@ -1,0 +1,74 @@
+// ----------------------------------------------------------
+// MIXINS
+// ----------------------------------------------------------
+@mixin box-shadow($shadows...){
+    box-shadow: $shadows !important;
+	-moz-box-shadow: $shadows !important;
+	-webkit-box-shadow: $shadows !important;
+	-o-box-shadow: $shadows !important;
+}
+
+@mixin box-sizing($sizing...){
+    -webkit-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-o-box-sizing: $sizing;
+}
+
+@mixin border-radius($radius...){
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+@mixin gradient($gradient...){
+	background-image: -moz-linear-gradient($gradient);
+	background-image: -webkit-linear-gradient($gradient);
+	background-image: -ms-linear-gradient($gradient);
+}
+
+@mixin transition($transition...){
+	transition: $transition;
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+}
+
+@mixin scale($size){
+	-moz-transform: scale($size);
+    -webkit-transform: scale($size);
+  	transform: scale($size);
+}
+
+@mixin image-fit($position){
+	object-fit: cover;
+	object-position: $position;
+}
+
+@mixin grayscale($value){
+	filter: grayscale($value);
+	-webkit-filter: grayscale($value);
+}
+@mixin circle($value){
+	width: $value;
+	height: $value;
+	line-height: $value;
+	text-align: center;
+	@include border-radius(100%);
+	@include image-fit(center);
+}
+
+@mixin placeholder($color){
+	::-webkit-input-placeholder {
+		color: $color!important;
+	}
+	::-moz-placeholder {
+		color: $color!important;
+	}
+	:-ms-input-placeholder {
+		color: $color!important;
+	}
+	:-moz-placeholder {
+		color: $color!important;
+	}
+}
